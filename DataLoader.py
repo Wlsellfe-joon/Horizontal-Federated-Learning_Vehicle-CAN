@@ -15,7 +15,7 @@ def IID(dataset, num_clients):
     print("clients_dict", clients_dict)
     return clients_dict
 
-
+''' not using
 def NonIID(dataset, num_clients, test=False):
     classes, images = 100, 600  # 10개의 클라이언트가 10개의 클래스를 선택하면 총 100개의 클래스들을, class당 600개 이미지씩 추출한다.
     if test:
@@ -40,6 +40,7 @@ def NonIID(dataset, num_clients, test=False):
             clients_dict[i] = np.concatenate(
                 (clients_dict[i], indices[t * images:(t + 1) * images]), axis=0)  # 선택된 추출 기준별 600개를 선택해서 추출
     return clients_dict
+'''
 
 # Loader func for RGBA channel image
 def custom_loader(path):
